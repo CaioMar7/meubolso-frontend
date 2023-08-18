@@ -26,11 +26,10 @@ export const LoginForm = styled.form`
     padding: 1rem 2rem;
 
     img {
-        height: 20vh;
+        height: 30vh;
         width: 100%;
 
         object-fit: contain;
-        filter: drop-shadow(3px 5px 4px #000);
 
         animation-name: floating;
         animation-duration: 3s;
@@ -42,14 +41,13 @@ export const LoginForm = styled.form`
         50%  { transform: translate(0, 10px); }
         100%   { transform: translate(0, -0px); }   
         }
-
-        margin-bottom: 1rem;
+        margin-top: 1.5rem;
     }
 
     border: none;
 
     @media screen and (min-width: 500px) {
-        height: 40rem;
+        height: 45rem;
         max-width: 30rem;
 
         box-shadow: 10px 10px 21px -10px rgba(0,0,0,0.1);

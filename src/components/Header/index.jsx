@@ -36,7 +36,7 @@ export function Header() {
                 }    
                     
                 </button> 
-                <MenuList visibility={menuMobileOpened}>
+                <MenuList visibility={menuMobileOpened} >
                 <li> Inicio </li>
                 {
                     authenticated ? 

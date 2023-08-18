@@ -15,18 +15,6 @@ export const Container = styled.div `
     main {
         padding: 1rem 2rem;
     }
-
-    footer {
-        width: 100%;
-
-        padding: 0 2rem calc(1rem + 3vh) 2rem;
-        font-size: calc(.4rem + 1vh);
-
-        p {
-            text-align: center;
-            color: ${({theme}) => theme.COLORS.TEXT_GREY}
-        }
-    }
     
 
     .blob-left {

@@ -37,7 +37,7 @@ export function Header() {
                     
                 </button> 
                 <MenuList visibility={menuMobileOpened}>
-                <li> Home </li>
+                <li> Inicio </li>
                 {
                     authenticated ? 
                     <>
@@ -47,7 +47,7 @@ export function Header() {
                     :
                     <>
                     <li> Login </li>
-                    <li> SignUp </li>
+                    <li> Cadastre-se </li>
                     </>
                 }
                 </MenuList>

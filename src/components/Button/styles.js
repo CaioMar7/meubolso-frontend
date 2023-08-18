@@ -16,6 +16,11 @@ export const Button = styled.button `
 
     transition: all .6s;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 
     &:hover {
         cursor: pointer;

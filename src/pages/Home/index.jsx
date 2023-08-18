@@ -3,6 +3,7 @@ import { Container, FirstSection } from "./styles"
 
 import HeroBanner from "../../assets/herobanner.svg"
 import { Button } from "../../components/Button/styles"
+import { Footer } from "../../components/Footer"
 
 export function Home() {
     return (
@@ -26,9 +27,7 @@ export function Home() {
                 <path fill="#1CAE81" d="M28.5,-30.8C43.5,-21.5,66.5,-18.6,76.4,-6.9C86.3,4.8,83,25.4,73.5,43.1C64.1,60.8,48.5,75.7,32.6,75.2C16.7,74.7,0.5,58.9,-17.6,51.1C-35.7,43.4,-55.8,43.6,-62.2,34.8C-68.6,26,-61.5,8.2,-55.4,-6.9C-49.3,-22.1,-44.4,-34.5,-35.3,-44.8C-26.3,-55.2,-13.2,-63.3,-3.2,-59.5C6.8,-55.7,13.6,-40,28.5,-30.8Z" transform="translate(100 100)" />
                 </svg>
             </main>
-            <footer> 
-                    <p> Todos os direitos reservados ao MeuBolso APP. </p>
-            </footer>
+            <Footer/>
         </Container>
     )
 }

@@ -66,6 +66,8 @@ export const MenuList = styled.ul`
 
     z-index: 1;
 
+    text-transform: uppercase;
+
     top: 0px;
     right: 0px;
 
@@ -75,6 +77,7 @@ export const MenuList = styled.ul`
 
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     font-weight: 700;
 
@@ -105,10 +108,11 @@ export const MenuList = styled.ul`
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
         padding: 0;
         margin-top: 0;
 
-        font-size: 1.6rem;
+        font-size: 1.3rem;
 
         height: 4rem;
 

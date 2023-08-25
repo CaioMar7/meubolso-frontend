@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 
 export function Header() {
-    const authenticated = false 
+    const authenticated = true 
 
     const [menuMobileOpened, setMenuMobileOpened] = useState(false)
 
@@ -43,7 +43,7 @@ export function Header() {
                     {
                         authenticated ? 
                         <>
-                            <li> <Link to="/"> Dashboard </Link> </li>
+                            <li> <Link to="/dashboard   "> Dashboard </Link> </li>
                             <li> <Link to="/"> Logout </Link> </li>
                         </>
                         :

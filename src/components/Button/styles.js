@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const Button = styled.button `
+export const Container = styled.button `
     color: ${({theme}) => theme.COLORS.TEXT_WHITE};
     background-color: ${({theme}) => theme.COLORS.GREEN_700};
 

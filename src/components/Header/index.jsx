@@ -4,6 +4,8 @@ import { TiThMenu } from "react-icons/ti"
 import { AiOutlineCloseCircle } from "react-icons/ai"
 import { GiTakeMyMoney } from "react-icons/gi"
 
+import { Link } from "react-router-dom"
+
 import { useState } from "react"
 
 export function Header() {
@@ -24,7 +26,7 @@ export function Header() {
     return (
         <Container>
             <div>
-                <h2> MeuBolso <GiTakeMyMoney/> </h2>
+                <Link to="/">  MeuBolso <GiTakeMyMoney/>  </Link>
             </div>
             <Menu>
                 <button className={"menuMobileBtn"} onClick={() => toggleMenuMobile()}> 
@@ -37,19 +39,19 @@ export function Header() {
                     
                 </button> 
                 <MenuList visibility={menuMobileOpened} >
-                <li> Inicio </li>
-                {
-                    authenticated ? 
-                    <>
-                    <li> Dashboard </li>
-                    <li> Logout </li>
-                    </>
-                    :
-                    <>
-                    <li> Login </li>
-                    <li> Cadastre-se </li>
-                    </>
-                }
+                    <li> <Link to="/"> Inicio </Link> </li>
+                    {
+                        authenticated ? 
+                        <>
+                            <li> <Link to="/"> Dashboard </Link> </li>
+                            <li> <Link to="/"> Logout </Link> </li>
+                        </>
+                        :
+                        <>
+                            <li> <Link to="/login"> Login </Link> </li>
+                            <li> <Link to="/register"> Cadastre-se </Link> </li>
+                        </>
+                    }
                 </MenuList>
                 
             </Menu>

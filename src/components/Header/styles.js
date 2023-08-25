@@ -14,11 +14,14 @@ export const Container = styled.header`
     align-items: center;
 
     div {
-        h2 {
+        a {
+            color: ${({theme}) => theme.COLORS.TEXT_WHITE};
             font-size: 1.4rem;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-decoration: none;
+            font-weight: 900;
         }
 
         svg {
@@ -83,8 +86,6 @@ export const MenuList = styled.ul`
 
     gap: 4rem;
 
-    font-size: 2rem;
-
     padding-top: 4rem;
 
     margin-top: .3rem;
@@ -103,6 +104,10 @@ export const MenuList = styled.ul`
         opacity: 1;
     `}
 
+    li a {
+        font-size: 2rem;
+    }
+
     @media screen and (min-width: 500px) {
         display: flex;
         flex-direction: row;
@@ -111,8 +116,6 @@ export const MenuList = styled.ul`
 
         padding: 0;
         margin-top: 0;
-
-        font-size: 1.3rem;
 
         height: 4rem;
 
@@ -123,6 +126,11 @@ export const MenuList = styled.ul`
 
         position: inherit; 
         background: ${({theme}) => theme.COLORS.GREEN_900};
+
+        li a {
+            font-size: 1.3rem;  
+        }
+        
     }
 
     li {

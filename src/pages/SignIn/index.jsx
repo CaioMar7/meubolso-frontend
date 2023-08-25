@@ -1,4 +1,4 @@
-import { Button } from "../../components/Button/styles"
+import { Button } from "../../components/Button"
 import { Header } from "../../components/Header"
 import { Footer } from "../../components/Footer"
 import { Input } from "../../components/Input"
@@ -17,8 +17,8 @@ export function SignIn() {
                     <Input placeholder="E-mail" type="text" icon={AiOutlineMail}/>
                     <Input placeholder="Senha" type="password" icon={AiOutlineLock}  />
                     <ButtonList>
-                        <Button> Entrar </Button>
-                        <Button> Cadastre-se </Button>
+                        <Button title="Entrar" redirect="/"/>
+                        <Button title="Cadastrar"redirect="/register"/>
                     </ButtonList>
                 </LoginForm>
             </main>

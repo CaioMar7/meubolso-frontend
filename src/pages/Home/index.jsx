@@ -2,7 +2,7 @@ import { Header } from "../../components/Header"
 import { Container, FirstSection } from "./styles"
 
 import HeroBanner from "../../assets/herobanner.svg"
-import { Button } from "../../components/Button/styles"
+import { Button } from "../../components/Button"
 import { Footer } from "../../components/Footer"
 
 export function Home() {
@@ -20,7 +20,7 @@ export function Home() {
                 <div>
                     <h2> Conheça o MeuBolso APP e organize sua vida financeira!</h2>
                     <p> Com nosso APP você poderá registrar todas as entradas e saidas do seu dinheiro, organiza-los por categorias e filtra-los por datas.</p>
-                    <Button> Cadastre-se </Button>
+                    <Button title="Cadastre-se" redirect="/register"/>
                 </div>
                 </FirstSection>
                 <svg className={"blob-left"} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">

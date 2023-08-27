@@ -1,6 +1,9 @@
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
-import { Container } from "./styles";
+import { InfoCard } from "../../components/InfoCard";
+import { Container, Legend } from "./styles";
+
+import { AiOutlineAreaChart, AiOutlineFilter } from "react-icons/ai"
 
 export function Dashboard() {
 
@@ -9,15 +12,15 @@ export function Dashboard() {
             <Header/>
             <main>
                 <ul>
-                    <li> Saldo atual <span> R$ 25,00 </span></li>
-                    <li> Entrada nos ultimos <span> 30 dias </span></li>
-                    <li> Saida nos ultimos <span> 30 dias </span></li>
+                    <InfoCard title="Saldo atual" value="25,00" icon={AiOutlineAreaChart}/>
+                    <InfoCard title="Entrada nos ultimos 30 dias" value="25,00"/>
+                    <InfoCard title="Saida nos ultimos 30 dias" value="25,00"/>
                 </ul>
 
-                <div>
-                    <h2> Lançamentos </h2> 
-                    <p> Filtrar </p>
-                </div>
+                <Legend>
+                    <h3> Lançamentos </h3> 
+                    <p> Filtrar <AiOutlineFilter/> </p>
+                </Legend>
 
                 <ul>
                     <li> 

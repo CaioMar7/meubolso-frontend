@@ -1,5 +1,7 @@
 import { Container, Section, SecondSection } from "./styles";
 
+import { AiOutlineEdit, AiOutlineCloseCircle } from "react-icons/ai"
+
 export function EntrieCard( {title, description, date, value} ) {
     return (
         <Container>
@@ -14,10 +16,10 @@ export function EntrieCard( {title, description, date, value} ) {
                 </div>
                 <ul>
                     <li> 
-                        <button> x </button> 
+                        <button> <AiOutlineEdit/> </button> 
                     </li>
                     <li> 
-                        <button> e </button> 
+                        <button> <AiOutlineCloseCircle/> </button> 
                     </li>
                 </ul>
             </SecondSection>

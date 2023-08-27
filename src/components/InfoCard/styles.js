@@ -29,9 +29,17 @@ export const Container = styled.li `
     }
 
     @media screen and (min-width: 500px) {
-        min-width: 30vw;
-        height: 15rem;
+        min-width: 20vw;
+        height: 13rem;
 
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    span {
+        font-size: 2rem;
+
+        @media screen and (min-width: 500px) {
+            font-size: 4rem;
+        }
     }
 `

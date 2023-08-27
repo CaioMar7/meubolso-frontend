@@ -5,7 +5,7 @@ export const Container = styled.div `
     flex-direction: column;
     justify-content: space-between;
 
-    height: 80vh;
+    height: 90vh;
 
 
     main {
@@ -27,14 +27,14 @@ export const Container = styled.div `
     }
 
     @media screen and (min-width: 500px) {
-        height: 100vh;
+        height: 91vh;
     }
 
 `
 
 export const InfoList = styled.ul `
     width: 100%;
-    height: 65%;
+    min-height: 10rem;
 
     display: flex;
     flex-direction: row;
@@ -61,7 +61,7 @@ export const Legend = styled.div`
 
     h3, p {
         font-size: 1rem;
-        color: ${({theme}) => theme.COLORS.TEXT_GREY};
+        color: ${({theme}) => theme.COLORS.GREEN_900};
 
         @media screen and (min-width: 500px) {
             font-size: 2rem;

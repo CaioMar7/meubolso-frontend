@@ -15,7 +15,7 @@ export const Section = styled.section `
 
     p {
         font-size: .8rem;
-        color: ${({theme}) => theme.COLORS.TEXT_GREY}
+        color: ${({theme}) => theme.COLORS.TEXT_GREY};
     }
 
     span {
@@ -41,5 +41,24 @@ export const SecondSection = styled(Section) `
 
     ul {
         padding-right: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 1rem;
+
+        svg {
+            font-size: 1.2rem;
+        }
+
+        button {
+            transition: ease .6s;
+        }
+
+        button:hover {
+            cursor: pointer;
+            transform: translateY(-5px);
+        }
     }
 `

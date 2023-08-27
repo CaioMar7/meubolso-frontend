@@ -5,34 +5,52 @@ export const Container = styled.div `
     flex-direction: column;
     justify-content: space-between;
 
+    height: 80vh;
+
 
     main {
         width: 100%;
         height: 100%;
 
-        border: 1px solid red;
-
         padding: 1rem;
 
-        ul {
-            width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
 
-            display: flex;
-            flex-direction: row;
+        gap: 1rem;
 
-            gap: 1rem;
-
-            overflow-x: auto;
-
-            @media screen and (min-width: 500px) {
-                flex-direction: row;
-                gap: 2rem;
-            }
+        @media screen and (min-width: 500px) {
+            padding: 2rem 4rem;
         }
+    }
+
+    @media screen and (min-width: 500px) {
+        height: 100vh;
     }
 
 `
 
+export const InfoList = styled.ul `
+    width: 100%;
+    height: 65%;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 1rem;
+
+    overflow-x: auto;
+
+    @media screen and (min-width: 500px) {
+        flex-direction: row;
+        gap: 2rem;
+
+        height: 50%;
+    }
+
+`
 
 export const Legend = styled.div`
     display: flex;
@@ -44,6 +62,10 @@ export const Legend = styled.div`
     h3, p {
         font-size: 1rem;
         color: ${({theme}) => theme.COLORS.TEXT_GREY};
+
+        @media screen and (min-width: 500px) {
+            font-size: 2rem;
+        }
     }
 
     p {
@@ -52,4 +74,11 @@ export const Legend = styled.div`
         justify-content: center;
     }
 
+`
+
+export const EntriesList = styled.ul `
+    width: 100%;
+    height: 100%;
+
+    overflow-y: auto;
 `

@@ -3,7 +3,6 @@ import { styled } from "styled-components";
 export const Container = styled.li `
     height: 10rem;
     width: 100%;
-
     min-width: 90vw;
 
     display: flex;
@@ -15,6 +14,8 @@ export const Container = styled.li `
     padding: 1rem;
 
     border-radius: 2rem;
+
+    color: white;
 
     svg {
         height: 6rem;
@@ -29,5 +30,8 @@ export const Container = styled.li `
 
     @media screen and (min-width: 500px) {
         min-width: 30vw;
+        height: 15rem;
+
+        font-size: 1.5rem;
     }
 `

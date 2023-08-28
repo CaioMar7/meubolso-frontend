@@ -22,6 +22,10 @@ export const Container = styled.li `
         width: 100%;
     }
 
+    h2 p {
+        font-size: 1rem;
+    }
+
     div {
         display: flex;
         align-items: center;
@@ -29,7 +33,7 @@ export const Container = styled.li `
     }
 
     @media screen and (min-width: 500px) {
-        min-width: 20vw;
+        min-width: 15vw;
         height: 13rem;
 
         font-size: 1.2rem;
@@ -39,7 +43,7 @@ export const Container = styled.li `
         font-size: 2rem;
 
         @media screen and (min-width: 500px) {
-            font-size: 4rem;
+            font-size: calc(1rem + 2vw);
         }
     }
 `

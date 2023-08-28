@@ -4,7 +4,7 @@ import { Header } from "../../components/Header";
 import { InfoCard } from "../../components/InfoCard";
 import { Container, InfoList, Legend, EntriesList } from "./styles";
 
-import { AiOutlineAreaChart, AiOutlineFilter } from "react-icons/ai"
+import { AiOutlineAreaChart, AiOutlineFilter, AiOutlineHome, AiOutlineBarChart, AiOutlineUser, AiOutlineLogout } from "react-icons/ai"
 
 export function Dashboard() {
 
@@ -12,10 +12,19 @@ export function Dashboard() {
         <Container>
             <Header/>
             <main>
+
+                <aside>
+                    <ul>
+                        <li> <AiOutlineHome/> Inicio </li>
+                        <li> <AiOutlineBarChart/> Dashboard </li>
+                        <li> <AiOutlineUser/> Perfil </li>
+                        <li> <AiOutlineLogout/> Logout </li>
+                    </ul>
+                </aside>
                 
                 <InfoList>
-                    <InfoCard title="Saldo atual" value="R$ 500,00" icon={AiOutlineAreaChart}/>
-                    <InfoCard title="Entradas" description="ultimos 30 dias" value="R$ 600,00" icon={AiOutlineAreaChart}/>
+                    <InfoCard title="Saldo" description="atual" value="500,00" icon={AiOutlineAreaChart}/>
+                    <InfoCard title="Entradas" description="ultimos 30 dias" value="600,00" icon={AiOutlineAreaChart}/>
                     <InfoCard title="Saidas" description="ultimos 30 dias" value="100,00" icon={AiOutlineAreaChart}/>
                 </InfoList>
 

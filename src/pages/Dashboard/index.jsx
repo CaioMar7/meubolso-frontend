@@ -4,9 +4,36 @@ import { Header } from "../../components/Header";
 import { InfoCard } from "../../components/InfoCard";
 import { Container, InfoList, Legend, EntriesList } from "./styles";
 
+import { api } from "../../services/api";
+
+import { useState, useEffect } from "react";
+
 import { AiOutlineAreaChart, AiOutlineFilter, AiOutlineHome, AiOutlineBarChart, AiOutlineUser, AiOutlineLogout } from "react-icons/ai"
 
 export function Dashboard() {
+
+    const [entries, setEntries] = useState([])
+    const [totalEntries, setTotalEntries] = useState(0)
+
+
+    function getTotalEntries() {
+        const entradasFiltradas = entries.filter( entrie => entrie.type == "entrada")
+        setTotalEntries(entradasFiltradas.length)
+    }
+    
+    useEffect( () => {
+        async function fetchEntries() {
+
+            let query = `/entries/3`
+
+            const response = await api.get(query)
+            setEntries(response.data)
+            getTotalEntries()
+        }
+
+        fetchEntries()
+    }, [])
+
 
     return (
         <Container>
@@ -34,19 +61,11 @@ export function Dashboard() {
                 </Legend>
 
                 <EntriesList>
-                    <EntrieCard title="Conta de Luz" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Conta de Agua" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Condominio" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Faculdade" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Cartão Nubank" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Cartão Itau" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Conta de Gás" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Conta de Luz" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Conta de Luz" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Conta de Luz" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Conta de Luz" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Conta de Luz" description="Competência Agosto" date="27/08/2023" value="50,00"/>
-                    <EntrieCard title="Conta de Luz" description="Competência Agosto" date="27/08/2023" value="50,00"/>
+                {
+                        entries.map(entrie => (
+                            <EntrieCard key={entrie.id} title={entrie.description} description={entrie.category} date={entrie.created_at} value={entrie.value}/>
+                        ))
+                }
                 </EntriesList>
             </main>
         </Container>

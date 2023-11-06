@@ -148,4 +148,8 @@ export const EntriesList = styled.ul `
     overflow-y: auto;
 
     grid-area: entrieslist;
+
+    @media screen and (min-width: 500px) {
+        height: 50vh;
+    }
 `

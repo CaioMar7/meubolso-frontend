@@ -6,6 +6,10 @@ export const Container = styled.li `
     align-items: center;
 
     margin-bottom: 1rem;
+
+    border-bottom-width: 1px;
+    border-bottom-color: ${({theme}) => theme.COLORS.TEXT_GREY};
+    border-bottom-style: solid;
 `
 
 export const Section = styled.section `
